@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b16beb135a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-Do</title>
+  </head>
+  <body>
+    <header>
+      <h1>// To-Do <i class="fas fa-clipboard-list"></i></h1>
+    </header>
+
+    <div class="sidebar">
+      <ul class="nav">
+        <li class="label"><i class="fas fa-home"></i>Home</li>
+        <a href="#"
+          ><li><i class="fas fa-inbox"></i>Inbox</li></a
+        >
+        <a href="#"
+          ><li><i class="far fa-calendar"></i>Today</li></a
+        >
+        <a href="#"
+          ><li><i class="fas fa-calendar-week"></i> This Week</li></a
+        >
+        <li class="label"><i class="far fa-folder-open"></i>Projects</li>
+      </ul>
+      <button class="new-project" onclick="newElement()"><i class="fas fa-plus"> New Project</i></button>
+    </div>
+    
+    <div class="button-container">
+      <button class="openButton" id="openButton"><i class="fas fa-plus"></i> </button>
+    </div>
+    <div class="wrapper">
+    <div div id="01" class="modal">
+     <div class="close outer" title="close modal" id="closeButton"><div class="inner"><label class="close-label">Close</label></div></div>
+
+      <form class="formContainer animate modal-content animate" id="newTaskForm" name="taskForm">
+        <div class="inputGroup">
+          <div class="textGroup">
+            <input type="text" class="textBox task" name="taskName" required/>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="text-label">Task</label>
+          </div>
+       
+          
+             <div class="textGroup">
+            <input type="text" class="textBox desc" name="desc" required/>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="text-label">Description</label>
+          </div>
+
+          <div class="textGroup">
+            <input type="text"
+              class="datepicker-here form-control textBox"
+              id="minMaxExample"
+              data-date-format="dd/mm/yyy"
+              data-language="en"
+              name="date" required/>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="text-label">Due Date</label>
+          </div>
+          </div>
+          
+
+          <div class="priority-container">
+            <label class="priority-label">Priority:</label>
+            <label class="rad-label">
+              <input type="radio" class="rad-input" name="rad" value="low" />
+              <div class="rad-design"></div>
+              <div class="rad-text">Low</div>
+            </label>
+
+            <label class="rad-label">
+              <input type="radio" class="rad-input" name="rad" value="medium" />
+              <div class="rad-design"></div>
+              <div class="rad-text">Medium</div>
+            </label>
+
+            <label class="rad-label">
+              <input type="radio" class="rad-input" name="rad" value="high" />
+              <div class="rad-design"></div>
+              <div class="rad-text">High</div>
+            </label>
+          </div>
+
+          <div class="project-container">
+            <label class="project-label">Project:</label>
+            <details class="custom-select">
+              <summary class="radios">
+                <input
+                  type="radio"
+                  name="project"
+                  id="default"
+                  title="Project"
+                  class="project-input"
+                  checked
+                />
+              </summary>
+              <ul class="list">
+                <li class="list-item">
+                  <label for="item1">Item 1</label>
+                </li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="buttonContainer">
+            <button type="submit" class="btn submit" id="submitButton"><span>Submit</span>
+    <div class="success">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+      
+	<path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+ </svg>
+      </div>
+  </button>
+</div></button>
+          </div>
+          </div>
+      </form>
+    </div>
+
+ <div id="to-do">
+   <ul id="toDoList" class="to-do-list">
+ 
+   </ul>
+ </div>
+  </body>
+</html>
