@@ -1,7 +1,3 @@
-let btn = document.querySelector('.submit');
+import startup from './startup';
 
-btn.addEventListener('click', active);
-
-function active() {
-  btn.classList.toggle('is_active');
-}
+startup();
